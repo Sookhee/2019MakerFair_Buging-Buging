@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body onclick="abc()">
+        <script src="./buging.js"></script>
+        
+        <img id="img1" style="position:absolute; left:0; top:0; z-index:999;" src="images/aim.png">
+        
+        <script language="JavaScript">
+            function abc(){
+                context.drawImage(backgroundImg, 0, -10, width, height);
+                if(mouseX >= enemy.x-range && mouseX <= enemy.x+range && mouseY >= enemy.y-range && mouseY <= enemy.y+range ){
+                    enemy.y = 0;
+                    deadSound.play();
+                    score++;
+                    timeCount = timeCount + 10;
+                    ranNum = makeRandom(0, 5);
+                    enemy.y = -200;
+                }
+            }
+        
+        //-->
+        </script>
+    </body>
+</html>
